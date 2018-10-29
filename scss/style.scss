@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500%7CRoboto:400,900');
+@import "normalize";
+@import "layout";
+
+$primary-color: #ffcc00;
+$text-color: #333333;
+$light-gray: #898f8f;
+$dark-gray: #666;
+
+$base-font-family: 'Raleway',
+sans-serif;
+$header-font-family: 'Roboto',
+sans-serif;
+
+body {
+	font: 400 16px/1.5 $base-font-family;
+	color: $text-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0 0 20px;
+	font-family: $header-font-family;
+	font-weight: 900;
+}
+
+a {
+	color: $primary-color;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		color: $text-color;
+	}
+}
+
+/* Layout */
+.ba-container {
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 1200px;
+}
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button {
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button {
+	display: inline-block;
+
+	&:hover,
+	&:focus {
+		color: #000;
+	}
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+.ba-section {
+	padding: 100px 0;
+}
+
+.ba-section-title {
+	text-align: center;
+	color: $primary-color;
+	text-transform: uppercase;
+	position: relative;
+	font: 900 60px/1 $header-font-family;
+	margin-bottom: 44px;
+
+	&::after {
+		content: '';
+		display: block;
+		height: 1px;
+		max-width: 400px;
+		background-color: $primary-color;
+		margin: 45px auto 0;
+	}
+
+	&__icon {
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		transform: translate(-50%, 50%);
+		fill: $primary-color;
+		padding: 0 10px;
+		box-sizing: content-box;
+		// box-shadow: 0 0 0 10px #fff;
+		background-color: #fff;
+	}
+
+}
+
+.ba-section-suptitle {
+	text-align: center;
+}
+
+.ba-crewman {
+	display: flex;
+	align-items: center;
+
+	&__col-img {
+		flex-basis: 50%;
+		padding: 10px 84px 10px 46px;
+		display: flex;
+		justify-content: center;
+
+		img {
+			border: 1px solid $primary-color;
+			display: block;
+			position: relative;
+			z-index: 1;
+		}
+	}
+
+	&__img-wrap {
+		border: 1px solid $primary-color;
+		padding: 10px;
+		position: relative;
+
+		&:before {
+			position: absolute;
+			content: '';
+			left: 0;
+			right: 0;
+			background: #fff;
+			transform: rotate(45deg);
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__col-info {
+		flex-basis: 50%;
+		padding: 90px 46px 90px 84px;
+		text-align: center;
+		border-left: 1px solid $primary-color;
+	}
+
+	// &__text {
+	// 	&::after {
+	// 		content: '';
+	// 		display: block;
+	// 		height: 4px;
+	// 		max-width: 50px;
+	// 		background-color: $primary-color;
+	// 		margin: 16px auto 0;
+	// }
+	// }
+	&__decor{
+		max-width: 50px;
+		height: 4px;
+		margin: 0 auto 26px;
+		background-color: $primary-color;
+		position: relative;
+		
+		&::before {
+			content: '';
+			display: block;
+			background-color: #fff;
+			height: 4px;
+			width: 5px;
+			position: absolute;
+			top: 0;
+			left: 10px;
+		}
+		&::after {
+			content: '';
+			display: block;
+			background-color: #fff;
+			height: 4px;
+			width: 5px;
+			position: absolute;
+			top: 0;
+			right: 10px;
+		}
+	}
+
+	&__name {
+		font-size: 26px;
+		line-height: 1.3;
+		color: $dark-gray;
+
+		&::after {
+			content: '';
+			display: block;
+			height: 1px;
+			max-width: 100px;
+			background-color: $primary-color;
+			margin: 30px auto 0;
+		}
+	}
+
+	&__position {
+		font-size: 20px;
+		line-height: 1.3;
+		color: $light-gray;
+		margin-bottom: 26px;
+	}
+}
+
+.ba-socials {
+	display: flex;
+	justify-content: center;
+
+	a {
+		border: 2px solid #c3c3c3;
+		padding: 5px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&:hover {
+			border-color: $primary-color;
+		}
+		&:hover svg{
+			fill: $primary-color;
+		}
+	}
+	&__icon {
+		fill: #c3c3c3;
+	}
+	a+a {
+		margin-left: 5px;
+	}
+}
+.ba-btn {
+	border: 1px solid $primary-color;
+	text-transform: uppercase;
+	color: $dark-gray;
+	font-family: $header-font-family;
+	font-size: 10px;
+	padding: 6px 10px;
+	&:hover {
+		background-color: $primary-color;
+		color: #fff;
+	}
+}
