@@ -652,6 +652,8 @@ select {
 
 .ba-section-suptitle {
   text-align: center;
+  text-transform: uppercase;
+  color: #898f8f;
 }
 
 .ba-crewman {
