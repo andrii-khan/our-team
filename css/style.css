@@ -772,6 +772,7 @@ select {
 
 .ba-socials a {
   border: 2px solid #c3c3c3;
+  color: #c3c3c3;
   padding: 5px;
   border-radius: 50%;
   display: -webkit-box;
@@ -787,10 +788,11 @@ select {
 
 .ba-socials a:hover {
   border-color: #ffcc00;
+  color: #ffcc00;
 }
 
-.ba-socials a:hover svg {
-  fill: #ffcc00;
+.ba-socials svg {
+  fill: currentColor;
 }
 
 .ba-socials__icon {
